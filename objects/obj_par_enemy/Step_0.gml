@@ -22,3 +22,11 @@ if x > global.cmx + global.cmw + _border
 {
 	x = global.cmx - _border;
 }
+
+//Movimentacao do inimigo
+dir = point_direction(x, y, obj_player.x, obj_player.y);
+hspd = lengthdir_x(spd, dir);
+vspd = lengthdir_y(spd, dir);
+
+x += hspd;
+y += vspd;
