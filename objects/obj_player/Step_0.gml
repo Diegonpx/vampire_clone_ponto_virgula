@@ -20,3 +20,22 @@ else
 {
 	sprite_index = spr_player_idle;
 }
+
+//Diminuindo valor de countdown
+spell_1_cd--;
+
+//Criando a Spell
+if spell_1_cd <= 0
+{
+	//Localizando a instancio do inimigo mais proximo
+	var _enemy = instance_nearest (x, y, obj_par_enemy);
+	
+	//Criando e indo ate o inimigo mais proximo
+	var _inst = instance_create_layer(x, y, "Instances", obj_spell_1);
+	_inst.speed = 2;
+	_inst.direction = point_direction(x, y, _enemy.x, _enemy.y);
+	
+	
+	//Resetando o Countdown
+	spell_1_cd = spell_1_timer;
+}

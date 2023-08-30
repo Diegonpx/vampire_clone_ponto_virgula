@@ -1,3 +1,7 @@
+
+//Definindo a profundidade dos inimigos
+depth = -y;
+
 //Variavel local para definir o valor da borda(area) em que o inimigo pode sair da area da camera sem se teleportar
 var _border = 64;
 
@@ -30,3 +34,9 @@ vspd = lengthdir_y(spd, dir);
 
 x += hspd;
 y += vspd;
+
+//Destruindo o inimigo
+if hp <= 0
+{
+	instance_destroy();
+}

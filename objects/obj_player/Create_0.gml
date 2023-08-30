@@ -13,3 +13,8 @@ vspd = -1;
 spd = 1;
 //Direção
 dir = -1;
+
+//Timer da Spell
+spell_1_timer = 60;
+//Countdown da Spell
+spell_1_cd = spell_1_timer = 60;
